@@ -2,7 +2,7 @@ diploiVersion: v1.0
 components:
   - name: Spin Framework
     identifier: spin-framework
-    package: https://github.com/diploi/component-spin-framework#feature/config
+    package: https://github.com/diploi/component-spin-framework#main
     env:
       include: []
 addons: []
