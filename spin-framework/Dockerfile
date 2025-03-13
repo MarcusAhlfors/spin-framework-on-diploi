@@ -7,10 +7,10 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y unzip git curl nano wget sudo
 
 RUN echo "apache:x:1000:1000::/home/user:/bin/bash" >> /etc/passwd \
-  && echo "apache:x:1000:" >> /etc/group
-  && mkdir -p /home/apache
-  && chown 1000:1000 /home/apache
-  && usermod -aG sudo apache
+  && echo "apache:x:1000:" >> /etc/group \
+  && mkdir -p /home/apache \
+  && chown 1000:1000 /home/apache \
+  && usermod -aG sudo apache \
   && echo "apache ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # Install required packages
