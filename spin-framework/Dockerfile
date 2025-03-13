@@ -4,6 +4,8 @@ FROM php:8.2-apache
 # Set working directory
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y unzip git curl nano wget
+
 # Install required packages
 #RUN apt-get update && apt-get install -y \
 #    unzip \
